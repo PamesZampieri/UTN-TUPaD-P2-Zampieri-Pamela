@@ -7,7 +7,7 @@ public class Principal {
         // Crear un usuario
         Usuario usuario = new Usuario("Pamela Zampieri", "pamela@email.com");
 
-        // Crear un documento con firma digital y asociar el usuario
+        // Crear un documento con firma digital (se crea la firma dentro del documento y se asocia al usuario)
         Documento documento = new Documento(
                 "Contrato Laboral",
                 "Contenido del contrato...",
@@ -16,16 +16,16 @@ public class Principal {
                 usuario
         );
 
-        // Mostrar los datos del documento
-        System.out.println("Documento:");
+        // Mostrar los datos del documento completo
+        System.out.println("📄 Documento:");
         System.out.println(documento);
 
-        // Mostrar solo el usuario
-        System.out.println("\nUsuario asociado:");
-        System.out.println(usuario);
-
         // Mostrar solo la firma digital
-        System.out.println("\nFirma Digital del documento:");
+        System.out.println("\n🔏 Firma Digital del documento:");
         System.out.println(documento.getFirmaDigital());
+
+        // Mostrar solo el usuario que firmó
+        System.out.println("\n👤 Usuario asociado a la firma:");
+        System.out.println(documento.getFirmaDigital().getUsuario());
     }
 }

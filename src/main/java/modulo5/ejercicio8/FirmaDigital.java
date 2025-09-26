@@ -5,10 +5,12 @@ import java.util.Date;
 public class FirmaDigital {
     private String codigoHash;
     private Date fecha;
+    private Usuario usuario;
 
-    public FirmaDigital(String codigoHash, Date fecha) {
+    public FirmaDigital(String codigoHash, Date fecha, Usuario usuario) {
         this.codigoHash = codigoHash;
         this.fecha = fecha;
+        this.usuario = usuario;
     }
 
     // Getters y Setters
@@ -28,11 +30,20 @@ public class FirmaDigital {
         this.fecha = fecha;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
         return "FirmaDigital{" +
                 "codigoHash='" + codigoHash + '\'' +
                 ", fecha=" + fecha +
+                ", usuario=" + usuario +
                 '}';
     }
 }

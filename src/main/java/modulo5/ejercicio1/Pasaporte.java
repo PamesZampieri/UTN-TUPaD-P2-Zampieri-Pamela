@@ -8,11 +8,10 @@ public class Pasaporte {
     private Date fechaEmision;
     private Titular titular;
 
-    public Pasaporte(String numero, int idFoto, String formatoFoto, Date fechaEmision, Titular titular) {
+    public Pasaporte(String numero, int idFoto, String formatoFoto, Date fechaEmision) {
         this.numero = numero;
         this.foto = new Foto(idFoto, formatoFoto);
         this.fechaEmision = fechaEmision;
-        this.titular = titular;
     }
 
     // Getters y setters

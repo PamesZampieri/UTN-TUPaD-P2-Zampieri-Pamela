@@ -6,13 +6,11 @@ public class Documento {
     private String titulo;
     private String contenido;
     private FirmaDigital firmaDigital;
-    private Usuario usuario;
 
     public Documento(String titulo, String contenido, String codigoHash, Date fecha, Usuario usuario) {
         this.titulo = titulo;
         this.contenido = contenido;
-        this.firmaDigital = new FirmaDigital(codigoHash, fecha);
-        this.usuario = usuario;
+        this.firmaDigital = new FirmaDigital(codigoHash, fecha, usuario);
     }
 
     // Getters y Setters
@@ -40,21 +38,12 @@ public class Documento {
         this.firmaDigital = firmaDigital;
     }
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
     @Override
     public String toString() {
         return "Documento{" +
                 "titulo='" + titulo + '\'' +
                 ", contenido='" + contenido + '\'' +
                 ", firmaDigital=" + firmaDigital +
-                ", usuario=" + usuario +
                 '}';
     }
 }
