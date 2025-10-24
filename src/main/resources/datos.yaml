@@ -1,0 +1,18 @@
+---
+# Inventario tienda (YAML de prueba)
+nombre: Teclado mecánico azul
+precio: 25999
+categoria: Periféricos
+
+# Lista de productos destacados
+productos:
+  - Mouse inalámbrico
+  - Pad XL
+  - Soporte notebook
+  - Parlantes USB
+
+# Cliente de prueba
+cliente:
+  nombre: Pamela
+  email: pamela@example.com
+  notificaciones: true
